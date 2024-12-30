@@ -5,11 +5,13 @@ util class for calling zhipu ai api
 import os
 from time import sleep
 
+from dotenv import load_dotenv
 from zhipuai import ZhipuAI
 from zhipuai.core._errors import APIRequestFailedError
 
 from utils import timer
 
+load_dotenv(override=True)
 API_KEY = os.getenv("API_KEY")
 
 
